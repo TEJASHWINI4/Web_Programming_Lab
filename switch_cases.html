@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      function  isprime(num)
+        {
+            var flag=0;
+            if(num==1||num==0)
+            {
+                return false ;
+            }
+            for(var j=2;j<=num/2;j++)
+            {
+                if(num%j==0)
+                {
+                    flag=1;
+                }
+            }
+            if(flag==0)
+            {
+                return true;
+            }
+            else
+            return false;
+        }
+        
+        var l=prompt(" enter the lower limit");
+        var u=prompt(" enter the upper limit");
+        var a=[];
+        for(var i=l;i<=u;i++)
+        {
+            a.push(i);
+        }
+        var primenum=[];
+        for(i=0;i<a.length;i++)
+        {
+            if(isprime(a[i]))
+            {
+                primenum.push(a[i]);
+            }
+        }
+        var l=primenum.length;
+        if(l==0)
+        {
+            document.write("DIFFERENCE IS 0");
+        }
+        else if (l==1)
+        {
+            document.write("DIFFERENCE IS  "+primenum[0]);
+        }
+     
+        else 
+        {
+            document.write("DIFFERENCE IS  "+(primenum[l-1]-primenum[0]));
+        }
+    </script>
+</body>
+</html>

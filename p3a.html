@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a1=[],a2=[];
+        var k,flag=0;
+        var size1=prompt(" enter the size of  1st array:")
+        for(k=0;k<size1;k++)
+        {
+            a1[k]=prompt("enter the array 1 element"+(k+1));
+        }
+        var size2=prompt(" enter the size of  2st array:")
+        for(k=0;k<size2;k++)
+        {
+            a2[k]=prompt("enter the array 2 element"+(k+1));
+        }
+        if(size1==size2)
+        {
+          for(k=0;k<size1;k++)
+          {
+              if(a1[k]!=a2[k])
+              {
+                  flag=1;
+              }
+          }
+        }
+        else{
+            document.write("NOT EQUAL");
+        }
+
+        if(flag==0)
+        {
+            document.write("EQUAL");
+        }
+        if(flag==1)
+        {
+            document.write("NOT EQUAL"); 
+        }
+    
+    </script>
+</body>
+</html>
